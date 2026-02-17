@@ -1,0 +1,45 @@
+server:
+  port: 8082
+  forward-headers-strategy: framework
+
+spring:
+  application:
+    name: notification-service
+
+  # ==========================================
+  # 📡 KAFKA CONSUMER CONFIGURATION
+  # ==========================================
+  kafka:
+    bootstrap-servers: localhost:9092
+
+    consumer:
+      group-id: notification-group
+      auto-offset-reset: earliest
+
+      # Deserializers
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+
+      properties:
+        # 🛡️ EXACTLY ONCE: Consumer config
+        isolation.level: read_committed
+        spring.json.trusted.packages: "*"
+
+# ==========================================
+# SWAGGER / OPENAPI
+# ==========================================
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+# ==========================================
+# 📊 LOGGING CONFIGURATION
+# ==========================================
+logging:
+  level:
+    com.example.notification: DEBUG
+    org.springframework.kafka: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
