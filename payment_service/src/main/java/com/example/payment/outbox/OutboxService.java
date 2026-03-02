@@ -1,6 +1,7 @@
 package com.example.payment.outbox;
 
 import com.example.payment.kafka.event.PaymentEvent;
+import com.example.payment.observability.KafkaTracePropagator;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Service;
@@ -18,6 +19,7 @@ public class OutboxService {
 
     public void enqueuePaymentEvent(PaymentEvent paymentEvent) {
         String payload = toJson(paymentEvent);
+        String traceParent = KafkaTracePropagator.currentTraceParent();
 
         OutboxEvent outboxEvent = OutboxEvent.builder()
                 .aggregateType("Payment")
@@ -26,6 +28,7 @@ public class OutboxService {
                 .payload(payload)
                 .status(OutboxEventStatus.NEW)
                 .attempts(0)
+                .traceParent(traceParent)
                 .build();
 
         outboxEventRepository.save(outboxEvent);

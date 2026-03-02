@@ -1,0 +1,4920 @@
+2026-02-28 13:15:28 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:15:28 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:15:30 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:15:30 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:15:32 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:15:32 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:15:34 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:15:34 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:15:36 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:15:36 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:15:38 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:15:38 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:15:40 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:15:40 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:15:42 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:15:42 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:15:44 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:15:44 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:15:46 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:15:46 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:15:48 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:15:48 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:15:50 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:15:50 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:15:52 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:15:52 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:15:54 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:15:54 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:15:56 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:15:56 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:15:58 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:15:58 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:00 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:00 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:02 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:02 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:04 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:04 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:06 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:06 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:08 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:08 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:10 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:10 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:12 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:12 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:14 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:14 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:16 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:16 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:18 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:18 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:20 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:20 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:22 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:22 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:24 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:24 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:26 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:26 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:28 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:28 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:30 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:30 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:32 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:32 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:34 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:34 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:36 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:36 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:38 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:38 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:40 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:40 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:42 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:42 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:44 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:44 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:46 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:46 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:48 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:48 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:50 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:50 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:52 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:52 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:54 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:54 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:56 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:56 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:58 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:16:58 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:17:00 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:17:00 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:17:02 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:17:02 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:17:04 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:17:04 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:17:06 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:17:06 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:17:08 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:17:08 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:17:10 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:17:10 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:17:12 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:17:12 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:17:14 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:17:14 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:17:16 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:17:16 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:17:18 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:17:18 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:17:20 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:17:20 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:17:22 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:17:22 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:17:24 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:17:24 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:17:26 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+2026-02-28 13:17:26 [scheduling-1] DEBUG org.hibernate.SQL - 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        oe1_0.id,
+        oe1_0.aggregate_id,
+        oe1_0.aggregate_type,
+        oe1_0.attempts,
+        oe1_0.created_at,
+        oe1_0.event_type,
+        oe1_0.payload,
+        oe1_0.sent_at,
+        oe1_0.status,
+        oe1_0.trace_parent 
+    from
+        outbox_events oe1_0 
+    where
+        oe1_0.status=? 
+        and oe1_0.attempts<? 
+    order by
+        oe1_0.created_at 
+    fetch
+        first ? rows only

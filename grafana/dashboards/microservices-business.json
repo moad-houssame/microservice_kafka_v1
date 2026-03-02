@@ -1,0 +1,272 @@
+{
+    "uid": "microservices-business",
+    "title": "Business Dashboard & Observability",
+    "schemaVersion": 38,
+    "version": 2,
+    "refresh": "10s",
+    "templating": {
+        "list": [
+            {
+                "name": "trace_id",
+                "type": "custom",
+                "options": [
+                    {
+                        "selected": false,
+                        "text": "",
+                        "value": ""
+                    }
+                ],
+                "query": "",
+                "current": {
+                    "selected": false,
+                    "text": "",
+                    "value": ""
+                },
+                "hide": 0
+            }
+        ]
+    },
+    "panels": [
+        {
+            "type": "stat",
+            "title": "Commandes (Total)",
+            "datasource": {
+                "type": "prometheus",
+                "uid": "Prometheus"
+            },
+            "targets": [
+                {
+                    "expr": "sum(orders_processed_total)",
+                    "refId": "A"
+                }
+            ],
+            "gridPos": {
+                "h": 6,
+                "w": 5,
+                "x": 0,
+                "y": 0
+            }
+        },
+        {
+            "type": "stat",
+            "title": "Paiements (Total)",
+            "datasource": {
+                "type": "prometheus",
+                "uid": "Prometheus"
+            },
+            "targets": [
+                {
+                    "expr": "sum(payments_processed_total)",
+                    "refId": "A"
+                }
+            ],
+            "gridPos": {
+                "h": 6,
+                "w": 5,
+                "x": 5,
+                "y": 0
+            }
+        },
+        {
+            "type": "stat",
+            "title": "Notifications (Total)",
+            "datasource": {
+                "type": "prometheus",
+                "uid": "Prometheus"
+            },
+            "targets": [
+                {
+                    "expr": "sum(notifications_sent_total)",
+                    "refId": "A"
+                }
+            ],
+            "gridPos": {
+                "h": 6,
+                "w": 5,
+                "x": 10,
+                "y": 0
+            }
+        },
+        {
+            "type": "stat",
+            "title": "Kafka Avro Messages Envoyés",
+            "datasource": {
+                "type": "prometheus",
+                "uid": "Prometheus"
+            },
+            "targets": [
+                {
+                    "expr": "sum(spring_kafka_template_seconds_count{name=\"pipelineAvroKafkaTemplate\"})",
+                    "refId": "A"
+                }
+            ],
+            "gridPos": {
+                "h": 6,
+                "w": 4,
+                "x": 15,
+                "y": 0
+            }
+        },
+        {
+            "type": "stat",
+            "title": "Durée Traitement (avg ms)",
+            "datasource": {
+                "type": "prometheus",
+                "uid": "Prometheus"
+            },
+            "targets": [
+                {
+                    "expr": "sum(orders_processing_duration_seconds_sum) / sum(orders_processing_duration_seconds_count) * 1000",
+                    "refId": "A"
+                }
+            ],
+            "fieldConfig": {
+                "defaults": {
+                    "unit": "ms"
+                }
+            },
+            "gridPos": {
+                "h": 6,
+                "w": 5,
+                "x": 19,
+                "y": 0
+            }
+        },
+        {
+            "type": "timeseries",
+            "title": "Latence HTTP - Payment Service",
+            "datasource": {
+                "type": "prometheus",
+                "uid": "Prometheus"
+            },
+            "targets": [
+                {
+                    "expr": "http_server_requests_seconds_max{uri=\"/api/orders\"}",
+                    "legendFormat": "Max Latency /api/orders",
+                    "refId": "A"
+                },
+                {
+                    "expr": "rate(http_server_requests_seconds_sum{uri=\"/api/orders\"}[5m]) / rate(http_server_requests_seconds_count{uri=\"/api/orders\"}[5m])",
+                    "legendFormat": "Avg Latency /api/orders",
+                    "refId": "B"
+                }
+            ],
+            "fieldConfig": {
+                "defaults": {
+                    "unit": "s"
+                }
+            },
+            "gridPos": {
+                "h": 7,
+                "w": 12,
+                "x": 0,
+                "y": 6
+            }
+        },
+        {
+            "type": "timeseries",
+            "title": "Débit Requêtes (req/s)",
+            "datasource": {
+                "type": "prometheus",
+                "uid": "Prometheus"
+            },
+            "targets": [
+                {
+                    "expr": "sum(rate(http_server_requests_seconds_count{uri=\"/api/orders\"}[5m]))",
+                    "legendFormat": "Orders req/s",
+                    "refId": "A"
+                },
+                {
+                    "expr": "sum(rate(http_server_requests_seconds_count{uri=\"/api/payments\"}[5m]))",
+                    "legendFormat": "Payments req/s",
+                    "refId": "B"
+                }
+            ],
+            "fieldConfig": {
+                "defaults": {
+                    "unit": "reqps"
+                }
+            },
+            "gridPos": {
+                "h": 7,
+                "w": 12,
+                "x": 12,
+                "y": 6
+            }
+        },
+        {
+            "type": "text",
+            "title": "Traces (Jaeger)",
+            "options": {
+                "mode": "markdown",
+                "content": "### 🔍 Analyse Distribuée\n\n[Ouvrir l'interface Jaeger pour le traçage complet](http://localhost:16686)\n\n*(Copiez un Trace ID depuis les logs ci-dessous pour filtrer dans Jaeger)*"
+            },
+            "gridPos": {
+                "h": 4,
+                "w": 24,
+                "x": 0,
+                "y": 13
+            }
+        },
+        {
+            "type": "logs",
+            "title": "Logs - Payment Service (Général)",
+            "datasource": {
+                "type": "loki",
+                "uid": "Loki"
+            },
+            "targets": [
+                {
+                    "expr": "{job=\"payment-service\"} |= \"$trace_id\"",
+                    "refId": "A"
+                },
+                {
+                    "expr": "{service_name=\"payment-service\"} |= \"$trace_id\"",
+                    "refId": "B"
+                },
+                {
+                    "expr": "{container=\"payment-service\"} |= \"$trace_id\"",
+                    "refId": "C"
+                }
+            ],
+            "gridPos": {
+                "h": 8,
+                "w": 12,
+                "x": 0,
+                "y": 17
+            }
+        },
+        {
+            "type": "logs",
+            "title": "Logs - Filtré par Trace ID (Corrélation Jaeger)",
+            "datasource": {
+                "type": "loki",
+                "uid": "Loki"
+            },
+            "targets": [
+                {
+                    "expr": "{job=~\"payment-service|notification-service\"} |= \"$trace_id\"",
+                    "refId": "A"
+                },
+                {
+                    "expr": "{service_name=~\"payment-service|notification-service\"} |= \"$trace_id\"",
+                    "refId": "B"
+                },
+                {
+                    "expr": "{container=~\"payment-service|notification-service\"} |= \"$trace_id\"",
+                    "refId": "C"
+                }
+            ],
+            "gridPos": {
+                "h": 8,
+                "w": 12,
+                "x": 12,
+                "y": 17
+            }
+        }
+    ],
+    "time": {
+        "from": "now-15m",
+        "to": "now"
+    }
+}

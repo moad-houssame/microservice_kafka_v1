@@ -270,3 +270,43 @@ curl "http://localhost:8082/api/notifications?userId=U-99"
 curl "http://localhost:8082/api/notifications?orderId=ORD-123"
 curl -X DELETE "http://localhost:8082/api/notifications"
 ```
+
+## 🔁 Pipeline Kafka (POC)
+
+Parcours:
+`orders-topic` → **payment-service** (read/process/write) → `payments-topic` → **notification-service** (read/process/write) → `notifications-topic`
+
+## ✅ Format de messages (Avro par défaut)
+
+Par défaut, le pipeline utilise **Avro** via Schema Registry.
+
+Pour repasser en **JSON**, il suffit de définir :
+
+```yaml
+app:
+  kafka:
+    message-format: json
+```
+
+En Avro (par défaut) :
+
+```yaml
+app:
+  kafka:
+    message-format: avro
+```
+
+Schema Registry (Docker) : http://localhost:8085
+
+### Observabilite (POC)
+
+- Jaeger: `http://localhost:16686`
+- Grafana: `http://localhost:3000`
+- Prometheus: `http://localhost:9090`
+- Loki: `http://localhost:3100`
+
+### Script de demo
+
+```
+./scripts/demo-pipeline.ps1 -OrderId "order-001"
+```

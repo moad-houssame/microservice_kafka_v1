@@ -7,10 +7,29 @@ spring:
     name: notification-service
 
   # ==========================================
+  # 🗄️ DATABASE CONFIGURATION (PostgreSQL)
+  # ==========================================
+  datasource:
+    url: jdbc:postgresql://localhost:5432/payment_db
+    username: user
+    password: password
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  # ==========================================
   # 📡 KAFKA CONSUMER CONFIGURATION
   # ==========================================
   kafka:
     bootstrap-servers: localhost:9092
+    properties:
+      schema.registry.url: http://localhost:8085
 
     consumer:
       group-id: notification-group
@@ -24,6 +43,13 @@ spring:
         # 🛡️ EXACTLY ONCE: Consumer config
         isolation.level: read_committed
         spring.json.trusted.packages: "*"
+
+app:
+  kafka:
+    message-format: avro
+    topics:
+      payments: payments-topic
+      notifications: notifications-topic
 
 # ==========================================
 # SWAGGER / OPENAPI
@@ -43,3 +69,16 @@ logging:
     org.springframework.kafka: INFO
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
+# ==========================================
+# 📡 ACTUATOR / PROMETHEUS
+# ==========================================
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,prometheus,info
+  metrics:
+    export:
+      prometheus:
+        enabled: true

@@ -4,6 +4,7 @@ import com.example.payment.dto.PaymentRequest;
 import com.example.payment.dto.PaymentResponse;
 import com.example.payment.entity.Payment;
 import com.example.payment.service.PaymentService;
+import io.opentelemetry.api.trace.Span;
 import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -54,16 +55,22 @@ public class PaymentController {
         LOGGER.info("📥 POST /api/payments - orderId: {}", paymentRequest.getOrderId());
 
         PaymentResponse response = paymentService.processPayment(paymentRequest);
+        String traceId = Span.current().getSpanContext().getTraceId();
+        LOGGER.info("🔎 TraceId: {}", traceId);
 
         // Si le paiement existait déjà, retourner 200 OK (idempotence)
         if (response.isAlreadyProcessed()) {
             LOGGER.info("⚠️ Paiement déjà traité - retour 200 OK (Exactly Once)");
-            return ResponseEntity.ok(response);
+            return ResponseEntity.ok()
+                    .header("X-Trace-Id", traceId)
+                    .body(response);
         }
 
         // Nouveau paiement créé
         LOGGER.info("✅ Nouveau paiement créé - retour 201 CREATED");
-        return new ResponseEntity<>(response, HttpStatus.CREATED);
+        return ResponseEntity.status(HttpStatus.CREATED)
+                .header("X-Trace-Id", traceId)
+                .body(response);
     }
 
     /**

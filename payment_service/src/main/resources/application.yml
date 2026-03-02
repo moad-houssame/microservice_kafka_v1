@@ -29,19 +29,25 @@ spring:
   # ==========================================
   kafka:
     bootstrap-servers: localhost:9092
-
+    properties:
+      schema.registry.url: http://localhost:8085
     producer:
-      # Serializers
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
       transaction-id-prefix: tx-
-
-      # 🛡️ EXACTLY ONCE: Idempotent Producer
       properties:
         enable.idempotence: true
         acks: all
         retries: 3
         max.in.flight.requests.per.connection: 1
+
+app:
+  kafka:
+    message-format: avro
+    topics:
+      orders: orders-topic
+      payments: payments-topic
+      notifications: notifications-topic
 
 # ==========================================
 # 📚 SWAGGER / OPENAPI
@@ -62,3 +68,16 @@ logging:
     org.hibernate.SQL: DEBUG
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
+# ==========================================
+# 📡 ACTUATOR / PROMETHEUS
+# ==========================================
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,prometheus,info
+  metrics:
+    export:
+      prometheus:
+        enabled: true

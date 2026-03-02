@@ -1,6 +1,7 @@
 package com.example.payment.kafka.producer;
 
 import com.example.payment.kafka.event.PaymentEvent;
+import com.example.payment.observability.KafkaTracePropagator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -41,7 +42,9 @@ public class PaymentProducer {
         // Utilise orderId comme clé pour le partitioning
         String key = paymentEvent.getOrderId();
 
-        CompletableFuture<SendResult<String, Object>> future = kafkaTemplate.send(TOPIC, key, paymentEvent);
+        CompletableFuture<SendResult<String, Object>> future = kafkaTemplate.send(
+                KafkaTracePropagator.buildRecordWithCurrentTrace(TOPIC, key, paymentEvent)
+        );
 
         future.whenComplete((result, ex) -> {
             if (ex == null) {

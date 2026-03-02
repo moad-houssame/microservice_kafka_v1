@@ -1,0 +1,51 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+
+  cloud:
+    gateway:
+      forwarded:
+        enabled: true
+      globalcors:
+        add-to-simple-url-handler-mapping: true
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:8080"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+              - OPTIONS
+            allowedHeaders: "*"
+      routes:
+        - id: payment-service
+          uri: http://payment-service:8081
+          predicates:
+            - Path=/payment/**
+          filters:
+            - StripPrefix=1
+        - id: notification-service
+          uri: http://notification-service:8082
+          predicates:
+            - Path=/notification/**
+          filters:
+            - StripPrefix=1
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    urls:
+      - name: payment-service
+        url: /payment/api-docs
+      - name: notification-service
+        url: /notification/api-docs
+  api-docs:
+    path: /api-docs
+
+logging:
+  level:
+    org.springframework.cloud.gateway: INFO

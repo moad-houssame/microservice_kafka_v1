@@ -1,6 +1,7 @@
 package com.example.payment.outbox;
 
 import com.example.payment.kafka.event.PaymentEvent;
+import com.example.payment.observability.KafkaTracePropagator;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -53,7 +54,14 @@ public class OutboxPublisher {
                 PaymentEvent paymentEvent = objectMapper.readValue(event.getPayload(), PaymentEvent.class);
                 String key = paymentEvent.getOrderId();
 
-                kafkaTemplate.send(TOPIC, key, paymentEvent).get(10, TimeUnit.SECONDS);
+                kafkaTemplate.send(
+                        KafkaTracePropagator.buildRecordWithTraceParent(
+                                TOPIC,
+                                key,
+                                paymentEvent,
+                                event.getTraceParent()
+                        )
+                ).get(10, TimeUnit.SECONDS);
 
                 event.setStatus(OutboxEventStatus.SENT);
                 event.setSentAt(LocalDateTime.now());

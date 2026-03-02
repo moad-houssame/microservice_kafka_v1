@@ -46,6 +46,9 @@ public class OutboxEvent {
     @Column(name = "sent_at")
     private LocalDateTime sentAt;
 
+    @Column(name = "trace_parent", length = 255)
+    private String traceParent;
+
     @PrePersist
     protected void onCreate() {
         if (createdAt == null) {

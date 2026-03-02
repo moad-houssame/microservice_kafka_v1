@@ -28,4 +28,29 @@ public class KafkaConfig {
                 .replicas(1)
                 .build();
     }
+
+    @Bean
+    public NewTopic ordersTopic() {
+        return TopicBuilder.name("orders-topic")
+                .partitions(3)
+                .replicas(1)
+                .build();
+    }
+
+    @Bean
+    public NewTopic paymentsTopic() {
+        return TopicBuilder.name("payments-topic")
+                .partitions(3)
+                .replicas(1)
+                .build();
+    }
+
+    @Bean
+    public NewTopic notificationsTopic() {
+        return TopicBuilder.name("notifications-topic")
+                .partitions(3)
+                .replicas(1)
+                .build();
+    }
+
 }

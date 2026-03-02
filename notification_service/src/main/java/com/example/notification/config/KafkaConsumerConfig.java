@@ -4,6 +4,7 @@ import com.example.notification.event.PaymentEvent;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
@@ -21,6 +22,7 @@ import java.util.Map;
  * avec les paramètres Exactly Once (read_committed)
  */
 @Configuration
+@ConditionalOnProperty(name = "app.kafka.legacy.enabled", havingValue = "true")
 public class KafkaConsumerConfig {
 
     @Value("${spring.kafka.bootstrap-servers}")
