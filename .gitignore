@@ -1,0 +1,13 @@
+# IDE environments
+.idea/
+.vscode/
+*.iml
+
+# Node packages (if any frontend)
+node_modules/
+
+# Mac OS
+.DS_Store
+
+# Logs
+*.log
