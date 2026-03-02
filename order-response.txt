@@ -1,1 +1,0 @@
-{"paymentId":15,"orderId":"ORD-TRACE-DEMO","userId":"U-200","amount":750.50,"status":"SUCCESS","message":"Paiement traité avec succès","timestamp":"2026-02-28T11:49:46.944931209","alreadyProcessed":false}
