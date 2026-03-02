@@ -26,3 +26,4 @@ com\example\notification\event\PaymentEvent.class
 com\example\notification\controller\NotificationController.class
 com\example\notification\kafka\pipeline\dto\NotificationCreatedEvent$NotificationCreatedEventBuilder.class
 com\example\notification\observability\KafkaTracePropagator$1.class
+com\example\notification\kafka\pipeline\AvroNotificationEventPublisher.class
