@@ -2,13 +2,13 @@ package com.example.payment.kafka.streams;
 
 import com.example.avro.OrderCreated;
 import com.example.payment.dto.PaymentRequest;
-import com.example.payment.observability.KafkaTracePropagator;
 import com.example.payment.service.PaymentService;
 import io.micrometer.core.instrument.MeterRegistry;
+import io.micrometer.core.instrument.Timer;
+import io.opentelemetry.api.GlobalOpenTelemetry;
 import io.opentelemetry.api.trace.Span;
 import io.opentelemetry.api.trace.SpanKind;
 import io.opentelemetry.api.trace.Tracer;
-import io.opentelemetry.context.Context;
 import io.opentelemetry.context.Scope;
 import org.apache.kafka.streams.StreamsBuilder;
 import org.apache.kafka.streams.kstream.KStream;
@@ -26,7 +26,7 @@ import java.math.BigDecimal;
 public class OrderStreamProcessor {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(OrderStreamProcessor.class);
-    private static final Tracer TRACER = io.opentelemetry.api.GlobalOpenTelemetry.getTracer("payment-service");
+    private static final Tracer TRACER = GlobalOpenTelemetry.getTracer("payment-service");
 
     private final PaymentService paymentService;
     private final MeterRegistry meterRegistry;
@@ -46,6 +46,7 @@ public class OrderStreamProcessor {
 
         messageStream.foreach((key, orderCreated) -> {
             LOGGER.info("Kafka Streams processing Order: {}", orderCreated.getOrderId());
+            Timer.Sample sample = Timer.start(meterRegistry);
 
             // Reconstruct Trace from standard Kafka Headers (Kafka Streams hides them in
             // simple API,
@@ -67,11 +68,13 @@ public class OrderStreamProcessor {
                 // Appel au service transactionnel idempotent
                 paymentService.processPayment(request);
 
-                meterRegistry.counter("streams.orders.processed").increment();
+                meterRegistry.counter("orders.processed").increment();
+                meterRegistry.counter("payments.processed").increment();
             } catch (Exception e) {
                 LOGGER.error("Error processing stream for order: {}", orderCreated.getOrderId(), e);
                 consumeSpan.recordException(e);
             } finally {
+                sample.stop(meterRegistry.timer("orders.processing.duration"));
                 consumeSpan.end();
             }
         });

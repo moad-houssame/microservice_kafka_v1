@@ -119,7 +119,10 @@ public class PipelineKafkaConfig {
         props.put(ConsumerConfig.GROUP_ID_CONFIG, "notification-pipeline-group");
         props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
         props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
-        props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, KafkaAvroDeserializer.class);
+        props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG,
+                org.springframework.kafka.support.serializer.ErrorHandlingDeserializer.class);
+        props.put(org.springframework.kafka.support.serializer.ErrorHandlingDeserializer.VALUE_DESERIALIZER_CLASS,
+                KafkaAvroDeserializer.class.getName());
         props.put(AbstractKafkaSchemaSerDeConfig.SCHEMA_REGISTRY_URL_CONFIG, schemaRegistryUrl);
         props.put("specific.avro.reader", true);
         props.put(ConsumerConfig.ISOLATION_LEVEL_CONFIG, "read_committed");

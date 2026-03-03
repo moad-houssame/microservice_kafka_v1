@@ -29,8 +29,7 @@ public class OutboxEvent {
     @Column(name = "event_type", nullable = false)
     private String eventType;
 
-    @Lob
-    @Column(name = "payload", nullable = false)
+    @Column(name = "payload", nullable = false, columnDefinition = "TEXT")
     private String payload;
 
     @Enumerated(EnumType.STRING)

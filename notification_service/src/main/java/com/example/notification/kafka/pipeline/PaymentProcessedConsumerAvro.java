@@ -27,19 +27,16 @@ public class PaymentProcessedConsumerAvro {
 
     public PaymentProcessedConsumerAvro(
             NotificationEventPublisher notificationEventPublisher,
-            MeterRegistry meterRegistry
-    ) {
+            MeterRegistry meterRegistry) {
         this.notificationEventPublisher = notificationEventPublisher;
         this.meterRegistry = meterRegistry;
     }
 
-    @KafkaListener(
-            topics = "${app.kafka.topics.payments}",
-            groupId = "notification-pipeline-group",
-            containerFactory = "pipelineAvroListenerContainerFactory"
-    )
+    @KafkaListener(topics = "${app.kafka.topics.payments}", groupId = "notification-pipeline-group-v3", containerFactory = "pipelineAvroListenerContainerFactory")
     public void handle(ConsumerRecord<String, PaymentProcessed> record) {
+        System.out.println("🔥🔥🔥 KAFKA LISTENER TRIGGERED FOR KEY: " + record.key() + " 🔥🔥🔥");
         PaymentProcessed event = record.value();
+        System.out.println("🔥🔥🔥 DESERIALIZED AVRO: " + event + " 🔥🔥🔥");
         Timer.Sample sample = Timer.start(meterRegistry);
 
         Context extractedContext = KafkaTracePropagator.extractContext(record.headers());
@@ -59,7 +56,7 @@ public class PaymentProcessedConsumerAvro {
                     .message("Paiement " + event.getStatus() + " pour la commande " + event.getOrderId())
                     .build();
             notificationEventPublisher.publish(notification);
-            meterRegistry.counter("notifications.sent").increment();
+            meterRegistry.counter("notifications_sent_total").increment();
         } finally {
             sample.stop(meterRegistry.timer("notifications.processing.duration"));
             consumeSpan.end();

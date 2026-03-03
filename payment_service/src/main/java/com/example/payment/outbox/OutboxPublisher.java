@@ -1,5 +1,6 @@
 package com.example.payment.outbox;
 
+import com.example.avro.PaymentProcessed;
 import com.example.payment.kafka.event.PaymentEvent;
 import com.example.payment.observability.KafkaTracePropagator;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -17,63 +18,70 @@ import java.util.concurrent.TimeUnit;
 @Component
 public class OutboxPublisher {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(OutboxPublisher.class);
-    private static final String TOPIC = "payment-topic";
-    private static final int MAX_ATTEMPTS = 5;
+        private static final Logger LOGGER = LoggerFactory.getLogger(OutboxPublisher.class);
+        private static final String TOPIC = "payments-topic";
+        private static final int MAX_ATTEMPTS = 5;
 
-    private final OutboxEventRepository outboxEventRepository;
-    private final KafkaTemplate<String, Object> kafkaTemplate;
-    private final ObjectMapper objectMapper;
+        private final OutboxEventRepository outboxEventRepository;
+        private final KafkaTemplate<String, Object> kafkaTemplate;
+        private final ObjectMapper objectMapper;
 
-    public OutboxPublisher(
-            OutboxEventRepository outboxEventRepository,
-            KafkaTemplate<String, Object> kafkaTemplate,
-            ObjectMapper objectMapper
-    ) {
-        this.outboxEventRepository = outboxEventRepository;
-        this.kafkaTemplate = kafkaTemplate;
-        this.objectMapper = objectMapper;
-    }
-
-    @Scheduled(fixedDelayString = "${outbox.poll-interval-ms:2000}")
-    @Transactional("transactionManager")
-    public void publish() {
-        List<OutboxEvent> pending = outboxEventRepository
-                .findTop50ByStatusOrderByCreatedAtAsc(OutboxEventStatus.NEW);
-
-        List<OutboxEvent> retry = outboxEventRepository
-                .findTop50ByStatusAndAttemptsLessThanOrderByCreatedAtAsc(
-                        OutboxEventStatus.FAILED,
-                        MAX_ATTEMPTS
-                );
-
-        pending.addAll(retry);
-
-        for (OutboxEvent event : pending) {
-            try {
-                PaymentEvent paymentEvent = objectMapper.readValue(event.getPayload(), PaymentEvent.class);
-                String key = paymentEvent.getOrderId();
-
-                kafkaTemplate.send(
-                        KafkaTracePropagator.buildRecordWithTraceParent(
-                                TOPIC,
-                                key,
-                                paymentEvent,
-                                event.getTraceParent()
-                        )
-                ).get(10, TimeUnit.SECONDS);
-
-                event.setStatus(OutboxEventStatus.SENT);
-                event.setSentAt(LocalDateTime.now());
-                LOGGER.info("Outbox event sent: id={}, aggregateId={}", event.getId(), event.getAggregateId());
-            } catch (Exception ex) {
-                event.setStatus(OutboxEventStatus.FAILED);
-                event.setAttempts(event.getAttempts() + 1);
-                LOGGER.warn("Outbox send failed: id={}, attempts={}, error={}",
-                        event.getId(), event.getAttempts(), ex.getMessage());
-            }
+        public OutboxPublisher(
+                        OutboxEventRepository outboxEventRepository,
+                        KafkaTemplate<String, Object> kafkaTemplate,
+                        ObjectMapper objectMapper) {
+                this.outboxEventRepository = outboxEventRepository;
+                this.kafkaTemplate = kafkaTemplate;
+                this.objectMapper = objectMapper;
         }
 
-        outboxEventRepository.saveAll(pending);
-    }
+        @Scheduled(fixedDelayString = "${outbox.poll-interval-ms:2000}")
+        @Transactional("transactionManager")
+        public void publish() {
+                List<OutboxEvent> pending = outboxEventRepository
+                                .findTop50ByStatusOrderByCreatedAtAsc(OutboxEventStatus.NEW);
+
+                List<OutboxEvent> retry = outboxEventRepository
+                                .findTop50ByStatusAndAttemptsLessThanOrderByCreatedAtAsc(
+                                                OutboxEventStatus.FAILED,
+                                                MAX_ATTEMPTS);
+
+                pending.addAll(retry);
+
+                for (OutboxEvent event : pending) {
+                        try {
+                                PaymentEvent paymentEvent = objectMapper.readValue(event.getPayload(),
+                                                PaymentEvent.class);
+                                String key = paymentEvent.getOrderId();
+
+                                PaymentProcessed avroRecord = PaymentProcessed.newBuilder()
+                                                .setOrderId(paymentEvent.getOrderId())
+                                                .setUserId(paymentEvent.getUserId())
+                                                .setAmount(paymentEvent.getAmount().doubleValue())
+                                                .setStatus(paymentEvent.getStatus())
+                                                .setProcessedAt(paymentEvent.getTimestamp().toString())
+                                                .build();
+
+                                kafkaTemplate.send(
+                                                KafkaTracePropagator.buildRecordWithTraceParent(
+                                                                TOPIC,
+                                                                key,
+                                                                avroRecord,
+                                                                event.getTraceParent()))
+                                                .get(10, TimeUnit.SECONDS);
+
+                                event.setStatus(OutboxEventStatus.SENT);
+                                event.setSentAt(LocalDateTime.now());
+                                LOGGER.info("Outbox event sent: id={}, aggregateId={}", event.getId(),
+                                                event.getAggregateId());
+                        } catch (Exception ex) {
+                                event.setStatus(OutboxEventStatus.FAILED);
+                                event.setAttempts(event.getAttempts() + 1);
+                                LOGGER.warn("Outbox send failed: id={}, attempts={}, error={}",
+                                                event.getId(), event.getAttempts(), ex.getMessage());
+                        }
+                }
+
+                outboxEventRepository.saveAll(pending);
+        }
 }

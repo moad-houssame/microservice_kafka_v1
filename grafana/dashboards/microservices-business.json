@@ -36,10 +36,15 @@
             },
             "targets": [
                 {
-                    "expr": "sum(orders_processed_total)",
+                    "expr": "round(sum(increase(orders_processed_total[$__range])))",
                     "refId": "A"
                 }
             ],
+            "fieldConfig": {
+                "defaults": {
+                    "decimals": 0
+                }
+            },
             "gridPos": {
                 "h": 6,
                 "w": 5,
@@ -56,10 +61,15 @@
             },
             "targets": [
                 {
-                    "expr": "sum(payments_processed_total)",
+                    "expr": "round(sum(increase(payments_processed_total[$__range])))",
                     "refId": "A"
                 }
             ],
+            "fieldConfig": {
+                "defaults": {
+                    "decimals": 0
+                }
+            },
             "gridPos": {
                 "h": 6,
                 "w": 5,
@@ -76,10 +86,15 @@
             },
             "targets": [
                 {
-                    "expr": "sum(notifications_sent_total)",
+                    "expr": "round(sum(increase(notifications_sent_total[$__range])))",
                     "refId": "A"
                 }
             ],
+            "fieldConfig": {
+                "defaults": {
+                    "decimals": 0
+                }
+            },
             "gridPos": {
                 "h": 6,
                 "w": 5,
@@ -96,10 +111,15 @@
             },
             "targets": [
                 {
-                    "expr": "sum(spring_kafka_template_seconds_count{name=\"pipelineAvroKafkaTemplate\"})",
+                    "expr": "round(sum(increase(spring_kafka_template_seconds_count{name=\"pipelineAvroKafkaTemplate\"}[$__range])))",
                     "refId": "A"
                 }
             ],
+            "fieldConfig": {
+                "defaults": {
+                    "decimals": 0
+                }
+            },
             "gridPos": {
                 "h": 6,
                 "w": 4,
