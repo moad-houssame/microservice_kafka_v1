@@ -13,23 +13,26 @@ import org.apache.avro.message.BinaryMessageDecoder;
 import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
-public class OrderCreated extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
+public class OrderCreated extends org.apache.avro.specific.SpecificRecordBase
+    implements org.apache.avro.specific.SpecificRecord {
   private static final long serialVersionUID = -5861825003977557509L;
 
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse(
+      "{\"type\":\"record\",\"name\":\"OrderCreated\",\"namespace\":\"com.example.avro\",\"fields\":[{\"name\":\"orderId\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"userId\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"amount\",\"type\":\"double\"},{\"name\":\"createdAt\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}}]}");
 
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"OrderCreated\",\"namespace\":\"com.example.avro\",\"fields\":[{\"name\":\"orderId\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"userId\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"amount\",\"type\":\"double\"},{\"name\":\"createdAt\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}}]}");
-  public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
+  public static org.apache.avro.Schema getClassSchema() {
+    return SCHEMA$;
+  }
 
   private static final SpecificData MODEL$ = new SpecificData();
 
-  private static final BinaryMessageEncoder<OrderCreated> ENCODER =
-      new BinaryMessageEncoder<>(MODEL$, SCHEMA$);
+  private static final BinaryMessageEncoder<OrderCreated> ENCODER = new BinaryMessageEncoder<>(MODEL$, SCHEMA$);
 
-  private static final BinaryMessageDecoder<OrderCreated> DECODER =
-      new BinaryMessageDecoder<>(MODEL$, SCHEMA$);
+  private static final BinaryMessageDecoder<OrderCreated> DECODER = new BinaryMessageDecoder<>(MODEL$, SCHEMA$);
 
   /**
    * Return the BinaryMessageEncoder instance used by this class.
+   * 
    * @return the message encoder used by this class
    */
   public static BinaryMessageEncoder<OrderCreated> getEncoder() {
@@ -38,6 +41,7 @@ public class OrderCreated extends org.apache.avro.specific.SpecificRecordBase im
 
   /**
    * Return the BinaryMessageDecoder instance used by this class.
+   * 
    * @return the message decoder used by this class
    */
   public static BinaryMessageDecoder<OrderCreated> getDecoder() {
@@ -45,9 +49,12 @@ public class OrderCreated extends org.apache.avro.specific.SpecificRecordBase im
   }
 
   /**
-   * Create a new BinaryMessageDecoder instance for this class that uses the specified {@link SchemaStore}.
+   * Create a new BinaryMessageDecoder instance for this class that uses the
+   * specified {@link SchemaStore}.
+   * 
    * @param resolver a {@link SchemaStore} used to find schemas by fingerprint
-   * @return a BinaryMessageDecoder instance for this class backed by the given SchemaStore
+   * @return a BinaryMessageDecoder instance for this class backed by the given
+   *         SchemaStore
    */
   public static BinaryMessageDecoder<OrderCreated> createDecoder(SchemaStore resolver) {
     return new BinaryMessageDecoder<>(MODEL$, SCHEMA$, resolver);
@@ -55,6 +62,7 @@ public class OrderCreated extends org.apache.avro.specific.SpecificRecordBase im
 
   /**
    * Serializes this OrderCreated to a ByteBuffer.
+   * 
    * @return a buffer holding the serialized data for this instance
    * @throws java.io.IOException if this instance could not be serialized
    */
@@ -64,9 +72,11 @@ public class OrderCreated extends org.apache.avro.specific.SpecificRecordBase im
 
   /**
    * Deserializes a OrderCreated from a ByteBuffer.
+   * 
    * @param b a byte buffer holding serialized data for an instance of this class
    * @return a OrderCreated instance decoded from the given buffer
-   * @throws java.io.IOException if the given bytes could not be deserialized into an instance of this class
+   * @throws java.io.IOException if the given bytes could not be deserialized into
+   *                             an instance of this class
    */
   public static OrderCreated fromByteBuffer(
       java.nio.ByteBuffer b) throws java.io.IOException {
@@ -79,20 +89,23 @@ public class OrderCreated extends org.apache.avro.specific.SpecificRecordBase im
   private java.lang.String createdAt;
 
   /**
-   * Default constructor.  Note that this does not initialize fields
-   * to their default values from the schema.  If that is desired then
+   * Default constructor. Note that this does not initialize fields
+   * to their default values from the schema. If that is desired then
    * one should use <code>newBuilder()</code>.
    */
-  public OrderCreated() {}
+  public OrderCreated() {
+  }
 
   /**
    * All-args constructor.
-   * @param orderId The new value for orderId
-   * @param userId The new value for userId
-   * @param amount The new value for amount
+   * 
+   * @param orderId   The new value for orderId
+   * @param userId    The new value for userId
+   * @param amount    The new value for amount
    * @param createdAt The new value for createdAt
    */
-  public OrderCreated(java.lang.String orderId, java.lang.String userId, java.lang.Double amount, java.lang.String createdAt) {
+  public OrderCreated(java.lang.String orderId, java.lang.String userId, java.lang.Double amount,
+      java.lang.String createdAt) {
     this.orderId = orderId;
     this.userId = userId;
     this.amount = amount;
@@ -100,47 +113,66 @@ public class OrderCreated extends org.apache.avro.specific.SpecificRecordBase im
   }
 
   @Override
-  public org.apache.avro.specific.SpecificData getSpecificData() { return MODEL$; }
+  public org.apache.avro.specific.SpecificData getSpecificData() {
+    return MODEL$;
+  }
 
   @Override
-  public org.apache.avro.Schema getSchema() { return SCHEMA$; }
+  public org.apache.avro.Schema getSchema() {
+    return SCHEMA$;
+  }
 
-  // Used by DatumWriter.  Applications should not call.
+  // Used by DatumWriter. Applications should not call.
   @Override
   public java.lang.Object get(int field$) {
     switch (field$) {
-    case 0: return orderId;
-    case 1: return userId;
-    case 2: return amount;
-    case 3: return createdAt;
-    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
+      case 0:
+        return orderId;
+      case 1:
+        return userId;
+      case 2:
+        return amount;
+      case 3:
+        return createdAt;
+      default:
+        throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
-  // Used by DatumReader.  Applications should not call.
+  // Used by DatumReader. Applications should not call.
   @Override
-  @SuppressWarnings(value="unchecked")
+  @SuppressWarnings(value = "unchecked")
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
-    case 0: orderId = value$ != null ? value$.toString() : null; break;
-    case 1: userId = value$ != null ? value$.toString() : null; break;
-    case 2: amount = (java.lang.Double)value$; break;
-    case 3: createdAt = value$ != null ? value$.toString() : null; break;
-    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
+      case 0:
+        orderId = value$ != null ? value$.toString() : null;
+        break;
+      case 1:
+        userId = value$ != null ? value$.toString() : null;
+        break;
+      case 2:
+        amount = (java.lang.Double) value$;
+        break;
+      case 3:
+        createdAt = value$ != null ? value$.toString() : null;
+        break;
+      default:
+        throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
   /**
    * Gets the value of the 'orderId' field.
+   * 
    * @return The value of the 'orderId' field.
    */
   public java.lang.String getOrderId() {
     return orderId;
   }
 
-
   /**
    * Sets the value of the 'orderId' field.
+   * 
    * @param value the value to set.
    */
   public void setOrderId(java.lang.String value) {
@@ -149,15 +181,16 @@ public class OrderCreated extends org.apache.avro.specific.SpecificRecordBase im
 
   /**
    * Gets the value of the 'userId' field.
+   * 
    * @return The value of the 'userId' field.
    */
   public java.lang.String getUserId() {
     return userId;
   }
 
-
   /**
    * Sets the value of the 'userId' field.
+   * 
    * @param value the value to set.
    */
   public void setUserId(java.lang.String value) {
@@ -166,15 +199,16 @@ public class OrderCreated extends org.apache.avro.specific.SpecificRecordBase im
 
   /**
    * Gets the value of the 'amount' field.
+   * 
    * @return The value of the 'amount' field.
    */
   public double getAmount() {
     return amount;
   }
 
-
   /**
    * Sets the value of the 'amount' field.
+   * 
    * @param value the value to set.
    */
   public void setAmount(double value) {
@@ -183,15 +217,16 @@ public class OrderCreated extends org.apache.avro.specific.SpecificRecordBase im
 
   /**
    * Gets the value of the 'createdAt' field.
+   * 
    * @return The value of the 'createdAt' field.
    */
   public java.lang.String getCreatedAt() {
     return createdAt;
   }
 
-
   /**
    * Sets the value of the 'createdAt' field.
+   * 
    * @param value the value to set.
    */
   public void setCreatedAt(java.lang.String value) {
@@ -200,6 +235,7 @@ public class OrderCreated extends org.apache.avro.specific.SpecificRecordBase im
 
   /**
    * Creates a new OrderCreated RecordBuilder.
+   * 
    * @return A new OrderCreated RecordBuilder
    */
   public static com.example.avro.OrderCreated.Builder newBuilder() {
@@ -208,6 +244,7 @@ public class OrderCreated extends org.apache.avro.specific.SpecificRecordBase im
 
   /**
    * Creates a new OrderCreated RecordBuilder by copying an existing Builder.
+   * 
    * @param other The existing builder to copy.
    * @return A new OrderCreated RecordBuilder
    */
@@ -220,7 +257,9 @@ public class OrderCreated extends org.apache.avro.specific.SpecificRecordBase im
   }
 
   /**
-   * Creates a new OrderCreated RecordBuilder by copying an existing OrderCreated instance.
+   * Creates a new OrderCreated RecordBuilder by copying an existing OrderCreated
+   * instance.
+   * 
    * @param other The existing instance to copy.
    * @return A new OrderCreated RecordBuilder
    */
@@ -237,7 +276,7 @@ public class OrderCreated extends org.apache.avro.specific.SpecificRecordBase im
    */
   @org.apache.avro.specific.AvroGenerated
   public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<OrderCreated>
-    implements org.apache.avro.data.RecordBuilder<OrderCreated> {
+      implements org.apache.avro.data.RecordBuilder<OrderCreated> {
 
     private java.lang.String orderId;
     private java.lang.String userId;
@@ -251,6 +290,7 @@ public class OrderCreated extends org.apache.avro.specific.SpecificRecordBase im
 
     /**
      * Creates a Builder by copying an existing Builder.
+     * 
      * @param other The existing Builder to copy.
      */
     private Builder(com.example.avro.OrderCreated.Builder other) {
@@ -275,6 +315,7 @@ public class OrderCreated extends org.apache.avro.specific.SpecificRecordBase im
 
     /**
      * Creates a Builder by copying an existing OrderCreated instance
+     * 
      * @param other The existing instance to copy.
      */
     private Builder(com.example.avro.OrderCreated other) {
@@ -298,19 +339,20 @@ public class OrderCreated extends org.apache.avro.specific.SpecificRecordBase im
     }
 
     /**
-      * Gets the value of the 'orderId' field.
-      * @return The value.
-      */
+     * Gets the value of the 'orderId' field.
+     * 
+     * @return The value.
+     */
     public java.lang.String getOrderId() {
       return orderId;
     }
 
-
     /**
-      * Sets the value of the 'orderId' field.
-      * @param value The value of 'orderId'.
-      * @return This builder.
-      */
+     * Sets the value of the 'orderId' field.
+     * 
+     * @param value The value of 'orderId'.
+     * @return This builder.
+     */
     public com.example.avro.OrderCreated.Builder setOrderId(java.lang.String value) {
       validate(fields()[0], value);
       this.orderId = value;
@@ -319,18 +361,19 @@ public class OrderCreated extends org.apache.avro.specific.SpecificRecordBase im
     }
 
     /**
-      * Checks whether the 'orderId' field has been set.
-      * @return True if the 'orderId' field has been set, false otherwise.
-      */
+     * Checks whether the 'orderId' field has been set.
+     * 
+     * @return True if the 'orderId' field has been set, false otherwise.
+     */
     public boolean hasOrderId() {
       return fieldSetFlags()[0];
     }
 
-
     /**
-      * Clears the value of the 'orderId' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'orderId' field.
+     * 
+     * @return This builder.
+     */
     public com.example.avro.OrderCreated.Builder clearOrderId() {
       orderId = null;
       fieldSetFlags()[0] = false;
@@ -338,19 +381,20 @@ public class OrderCreated extends org.apache.avro.specific.SpecificRecordBase im
     }
 
     /**
-      * Gets the value of the 'userId' field.
-      * @return The value.
-      */
+     * Gets the value of the 'userId' field.
+     * 
+     * @return The value.
+     */
     public java.lang.String getUserId() {
       return userId;
     }
 
-
     /**
-      * Sets the value of the 'userId' field.
-      * @param value The value of 'userId'.
-      * @return This builder.
-      */
+     * Sets the value of the 'userId' field.
+     * 
+     * @param value The value of 'userId'.
+     * @return This builder.
+     */
     public com.example.avro.OrderCreated.Builder setUserId(java.lang.String value) {
       validate(fields()[1], value);
       this.userId = value;
@@ -359,18 +403,19 @@ public class OrderCreated extends org.apache.avro.specific.SpecificRecordBase im
     }
 
     /**
-      * Checks whether the 'userId' field has been set.
-      * @return True if the 'userId' field has been set, false otherwise.
-      */
+     * Checks whether the 'userId' field has been set.
+     * 
+     * @return True if the 'userId' field has been set, false otherwise.
+     */
     public boolean hasUserId() {
       return fieldSetFlags()[1];
     }
 
-
     /**
-      * Clears the value of the 'userId' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'userId' field.
+     * 
+     * @return This builder.
+     */
     public com.example.avro.OrderCreated.Builder clearUserId() {
       userId = null;
       fieldSetFlags()[1] = false;
@@ -378,19 +423,20 @@ public class OrderCreated extends org.apache.avro.specific.SpecificRecordBase im
     }
 
     /**
-      * Gets the value of the 'amount' field.
-      * @return The value.
-      */
+     * Gets the value of the 'amount' field.
+     * 
+     * @return The value.
+     */
     public double getAmount() {
       return amount;
     }
 
-
     /**
-      * Sets the value of the 'amount' field.
-      * @param value The value of 'amount'.
-      * @return This builder.
-      */
+     * Sets the value of the 'amount' field.
+     * 
+     * @param value The value of 'amount'.
+     * @return This builder.
+     */
     public com.example.avro.OrderCreated.Builder setAmount(double value) {
       validate(fields()[2], value);
       this.amount = value;
@@ -399,37 +445,39 @@ public class OrderCreated extends org.apache.avro.specific.SpecificRecordBase im
     }
 
     /**
-      * Checks whether the 'amount' field has been set.
-      * @return True if the 'amount' field has been set, false otherwise.
-      */
+     * Checks whether the 'amount' field has been set.
+     * 
+     * @return True if the 'amount' field has been set, false otherwise.
+     */
     public boolean hasAmount() {
       return fieldSetFlags()[2];
     }
 
-
     /**
-      * Clears the value of the 'amount' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'amount' field.
+     * 
+     * @return This builder.
+     */
     public com.example.avro.OrderCreated.Builder clearAmount() {
       fieldSetFlags()[2] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'createdAt' field.
-      * @return The value.
-      */
+     * Gets the value of the 'createdAt' field.
+     * 
+     * @return The value.
+     */
     public java.lang.String getCreatedAt() {
       return createdAt;
     }
 
-
     /**
-      * Sets the value of the 'createdAt' field.
-      * @param value The value of 'createdAt'.
-      * @return This builder.
-      */
+     * Sets the value of the 'createdAt' field.
+     * 
+     * @param value The value of 'createdAt'.
+     * @return This builder.
+     */
     public com.example.avro.OrderCreated.Builder setCreatedAt(java.lang.String value) {
       validate(fields()[3], value);
       this.createdAt = value;
@@ -438,18 +486,19 @@ public class OrderCreated extends org.apache.avro.specific.SpecificRecordBase im
     }
 
     /**
-      * Checks whether the 'createdAt' field has been set.
-      * @return True if the 'createdAt' field has been set, false otherwise.
-      */
+     * Checks whether the 'createdAt' field has been set.
+     * 
+     * @return True if the 'createdAt' field has been set, false otherwise.
+     */
     public boolean hasCreatedAt() {
       return fieldSetFlags()[3];
     }
 
-
     /**
-      * Clears the value of the 'createdAt' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'createdAt' field.
+     * 
+     * @return This builder.
+     */
     public com.example.avro.OrderCreated.Builder clearCreatedAt() {
       createdAt = null;
       fieldSetFlags()[3] = false;
@@ -475,28 +524,33 @@ public class OrderCreated extends org.apache.avro.specific.SpecificRecordBase im
   }
 
   @SuppressWarnings("unchecked")
-  private static final org.apache.avro.io.DatumWriter<OrderCreated>
-    WRITER$ = (org.apache.avro.io.DatumWriter<OrderCreated>)MODEL$.createDatumWriter(SCHEMA$);
+  private static final org.apache.avro.io.DatumWriter<OrderCreated> WRITER$ = (org.apache.avro.io.DatumWriter<OrderCreated>) MODEL$
+      .createDatumWriter(SCHEMA$);
 
-  @Override public void writeExternal(java.io.ObjectOutput out)
-    throws java.io.IOException {
+  @Override
+  public void writeExternal(java.io.ObjectOutput out)
+      throws java.io.IOException {
     WRITER$.write(this, SpecificData.getEncoder(out));
   }
 
   @SuppressWarnings("unchecked")
-  private static final org.apache.avro.io.DatumReader<OrderCreated>
-    READER$ = (org.apache.avro.io.DatumReader<OrderCreated>)MODEL$.createDatumReader(SCHEMA$);
+  private static final org.apache.avro.io.DatumReader<OrderCreated> READER$ = (org.apache.avro.io.DatumReader<OrderCreated>) MODEL$
+      .createDatumReader(SCHEMA$);
 
-  @Override public void readExternal(java.io.ObjectInput in)
-    throws java.io.IOException {
+  @Override
+  public void readExternal(java.io.ObjectInput in)
+      throws java.io.IOException {
     READER$.read(this, SpecificData.getDecoder(in));
   }
 
-  @Override protected boolean hasCustomCoders() { return true; }
+  @Override
+  protected boolean hasCustomCoders() {
+    return true;
+  }
 
-  @Override public void customEncode(org.apache.avro.io.Encoder out)
-    throws java.io.IOException
-  {
+  @Override
+  public void customEncode(org.apache.avro.io.Encoder out)
+      throws java.io.IOException {
     out.writeString(this.orderId);
 
     out.writeString(this.userId);
@@ -507,9 +561,9 @@ public class OrderCreated extends org.apache.avro.specific.SpecificRecordBase im
 
   }
 
-  @Override public void customDecode(org.apache.avro.io.ResolvingDecoder in)
-    throws java.io.IOException
-  {
+  @Override
+  public void customDecode(org.apache.avro.io.ResolvingDecoder in)
+      throws java.io.IOException {
     org.apache.avro.Schema.Field[] fieldOrder = in.readFieldOrderIfDiff();
     if (fieldOrder == null) {
       this.orderId = in.readString();
@@ -523,36 +577,26 @@ public class OrderCreated extends org.apache.avro.specific.SpecificRecordBase im
     } else {
       for (int i = 0; i < 4; i++) {
         switch (fieldOrder[i].pos()) {
-        case 0:
-          this.orderId = in.readString();
-          break;
+          case 0:
+            this.orderId = in.readString();
+            break;
 
-        case 1:
-          this.userId = in.readString();
-          break;
+          case 1:
+            this.userId = in.readString();
+            break;
 
-        case 2:
-          this.amount = in.readDouble();
-          break;
+          case 2:
+            this.amount = in.readDouble();
+            break;
 
-        case 3:
-          this.createdAt = in.readString();
-          break;
+          case 3:
+            this.createdAt = in.readString();
+            break;
 
-        default:
-          throw new java.io.IOException("Corrupt ResolvingDecoder.");
+          default:
+            throw new java.io.IOException("Corrupt ResolvingDecoder.");
         }
       }
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
