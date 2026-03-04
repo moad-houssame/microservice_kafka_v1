@@ -1,0 +1,78 @@
+server:
+  port: 8083
+  forward-headers-strategy: framework
+
+spring:
+  application:
+    name: order-service
+
+  # ==========================================
+  # 🗄️ DATABASE CONFIGURATION (PostgreSQL)
+  # ==========================================
+  datasource:
+    url: jdbc:postgresql://localhost:5432/payment_db
+    username: user
+    password: password
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+
+  # ==========================================
+  # 📡 KAFKA CONFIGURATION
+  # ==========================================
+  kafka:
+    bootstrap-servers: localhost:9092
+    properties:
+      schema.registry.url: http://localhost:8085
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+      properties:
+        acks: all
+        retries: 3
+
+app:
+  kafka:
+    message-format: avro
+    topics:
+      orders: orders-topic
+
+# ==========================================
+# 📚 SWAGGER / OPENAPI
+# ==========================================
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+# ==========================================
+# 📊 LOGGING CONFIGURATION
+# ==========================================
+logging:
+  level:
+    com.example.order: DEBUG
+    org.springframework.kafka: INFO
+    org.hibernate.SQL: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
+# ==========================================
+# 📡 ACTUATOR / PROMETHEUS
+# ==========================================
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,prometheus,info
+  metrics:
+    export:
+      prometheus:
+        enabled: true

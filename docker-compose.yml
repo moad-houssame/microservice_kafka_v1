@@ -1,5 +1,5 @@
 # ==========================================
-# 🚀 ARCHITECTURE MICROSERVICES - EXACTLY ONCE
+#  ARCHITECTURE MICROSERVICES - EXACTLY ONCE
 # ==========================================
 #
 # Client → Payment Service → PostgreSQL
@@ -45,14 +45,14 @@ services:
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
       KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
-      # 🛡️ EXACTLY ONCE: Configuration transactions
+      #  EXACTLY ONCE: Configuration transactions
       KAFKA_ENABLE_IDEMPOTENCE: "true"
       KAFKA_CREATE_TOPICS: "orders-topic:3:1,payments-topic:3:1,notifications-topic:3:1"
     networks:
       - payment-network
 
   # ==========================================
-  # 🗄️ POSTGRESQL - Base de données
+  #  POSTGRESQL - Base de données
   # ==========================================
   postgres:
     image: postgres:15
@@ -69,7 +69,7 @@ services:
       - payment-network
 
   # ==========================================
-  # 💳 PAYMENT SERVICE - Spring Boot
+  #  PAYMENT SERVICE - Spring Boot
   # ==========================================
   payment-service:
     build:
@@ -101,7 +101,7 @@ services:
       - payment-network
 
   # ==========================================
-  # 🔔 NOTIFICATION SERVICE - Spring Boot
+  #  NOTIFICATION SERVICE - Spring Boot
   # ==========================================
   notification-service:
     build:
@@ -134,7 +134,7 @@ services:
       - payment-network
 
   # ==========================================
-  # 🌐 API GATEWAY - Spring Boot
+  # API GATEWAY - Spring Boot
   # ==========================================
   api-gateway:
     build:
@@ -144,6 +144,7 @@ services:
     depends_on:
       - payment-service
       - notification-service
+      - order-service
     ports:
       - "8080:8080"
     environment:
@@ -162,7 +163,7 @@ services:
       - payment-network
 
   # ==========================================
-  # 🧭 OPENTELEMETRY COLLECTOR
+  # OPENTELEMETRY COLLECTOR
   # ==========================================
   otel-collector:
     image: otel/opentelemetry-collector-contrib:0.96.0
@@ -178,7 +179,7 @@ services:
       - payment-network
 
   # ==========================================
-  # 🧭 JAEGER - UI TRACES
+  # JAEGER - UI TRACES
   # ==========================================
   jaeger:
     image: jaegertracing/all-in-one:1.54.0
@@ -192,7 +193,7 @@ services:
       - payment-network
 
   # ==========================================
-  # 📈 PROMETHEUS
+  # PROMETHEUS
   # ==========================================
   prometheus:
     image: prom/prometheus:v2.51.1
@@ -205,7 +206,7 @@ services:
       - payment-network
 
   # ==========================================
-  # 📊 GRAFANA
+  # GRAFANA
   # ==========================================
   grafana:
     image: grafana/grafana:10.4.1
@@ -220,7 +221,7 @@ services:
       - payment-network
 
   # ==========================================
-  # 🪵 LOKI - LOGS
+  # LOKI - LOGS
   # ==========================================
   loki:
     image: grafana/loki:2.9.6
@@ -232,7 +233,7 @@ services:
       - payment-network
 
   # ==========================================
-  # 📜 SCHEMA REGISTRY - Avro
+  # SCHEMA REGISTRY - Avro
   # ==========================================
   schema-registry:
     image: confluentinc/cp-schema-registry:7.5.0
@@ -248,15 +249,48 @@ services:
     networks:
       - payment-network
 
+  # ==========================================
+  # 🛒 ORDER SERVICE - Spring Boot
+  # ==========================================
+  order-service:
+    build:
+      context: ./order_service
+      dockerfile: Dockerfile
+    container_name: order-service
+    depends_on:
+      - kafka
+      - postgres
+    ports:
+      - "8083:8083"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/payment_db
+      SPRING_DATASOURCE_USERNAME: user
+      SPRING_DATASOURCE_PASSWORD: password
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:29092
+      SPRING_KAFKA_PROPERTIES_SCHEMA_REGISTRY_URL: http://schema-registry:8085
+      APP_KAFKA_MESSAGE_FORMAT: avro
+      OTEL_SERVICE_NAME: order-service
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+      OTEL_EXPORTER_OTLP_PROTOCOL: grpc
+      OTEL_TRACES_EXPORTER: otlp
+      OTEL_METRICS_EXPORTER: otlp
+      OTEL_LOGS_EXPORTER: otlp
+      OTEL_INSTRUMENTATION_LOGBACK_APPENDER_ENABLED: "true"
+      OTEL_TRACES_SAMPLER: always_on
+      OTEL_LOG_LEVEL: debug
+    networks:
+      - payment-network
+
 # ==========================================
-# 🌐 NETWORK
+# NETWORK
 # ==========================================
 networks:
   payment-network:
     driver: bridge
 
 # ==========================================
-# 💾 VOLUMES
+# VOLUMES
 # ==========================================
 volumes:
   postgres_data:

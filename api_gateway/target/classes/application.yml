@@ -22,6 +22,12 @@ spring:
               - OPTIONS
             allowedHeaders: "*"
       routes:
+        - id: order-service
+          uri: http://order-service:8083
+          predicates:
+            - Path=/order/**
+          filters:
+            - StripPrefix=1
         - id: payment-service
           uri: http://payment-service:8081
           predicates:
@@ -39,6 +45,8 @@ springdoc:
   swagger-ui:
     path: /swagger-ui.html
     urls:
+      - name: order-service
+        url: /order/api-docs
       - name: payment-service
         url: /payment/api-docs
       - name: notification-service
