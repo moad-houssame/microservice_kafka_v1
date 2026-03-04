@@ -3,6 +3,7 @@ package com.example.notification.kafka.pipeline;
 import com.example.avro.PaymentProcessed;
 import com.example.notification.kafka.pipeline.dto.NotificationCreatedEvent;
 import com.example.notification.observability.KafkaTracePropagator;
+import io.micrometer.core.instrument.Counter;
 import io.micrometer.core.instrument.MeterRegistry;
 import io.micrometer.core.instrument.Timer;
 import io.opentelemetry.api.GlobalOpenTelemetry;
@@ -24,12 +25,16 @@ public class PaymentProcessedConsumerAvro {
 
     private final NotificationEventPublisher notificationEventPublisher;
     private final MeterRegistry meterRegistry;
+    private final Counter notificationsSentCounter;
 
     public PaymentProcessedConsumerAvro(
             NotificationEventPublisher notificationEventPublisher,
             MeterRegistry meterRegistry) {
         this.notificationEventPublisher = notificationEventPublisher;
         this.meterRegistry = meterRegistry;
+        this.notificationsSentCounter = Counter.builder("notifications_sent_total")
+                .description("Total number of notifications successfully sent")
+                .register(meterRegistry);
     }
 
     @KafkaListener(topics = "${app.kafka.topics.payments}", groupId = "notification-pipeline-group-v3", containerFactory = "pipelineAvroListenerContainerFactory")
@@ -56,7 +61,7 @@ public class PaymentProcessedConsumerAvro {
                     .message("Paiement " + event.getStatus() + " pour la commande " + event.getOrderId())
                     .build();
             notificationEventPublisher.publish(notification);
-            meterRegistry.counter("notifications_sent_total").increment();
+            notificationsSentCounter.increment();
         } finally {
             sample.stop(meterRegistry.timer("notifications.processing.duration"));
             consumeSpan.end();

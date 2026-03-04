@@ -14,6 +14,8 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import io.micrometer.core.instrument.Counter;
+import io.micrometer.core.instrument.MeterRegistry;
 import java.util.List;
 
 /**
@@ -32,10 +34,15 @@ public class PaymentServiceImpl implements PaymentService {
 
     private final PaymentRepository paymentRepository;
     private final OutboxService outboxService;
+    private final Counter paymentsProcessedCounter;
 
-    public PaymentServiceImpl(PaymentRepository paymentRepository, OutboxService outboxService) {
+    public PaymentServiceImpl(PaymentRepository paymentRepository, OutboxService outboxService,
+            MeterRegistry meterRegistry) {
         this.paymentRepository = paymentRepository;
         this.outboxService = outboxService;
+        this.paymentsProcessedCounter = Counter.builder("payments_processed_total")
+                .description("Total number of payments successfully processed")
+                .register(meterRegistry);
     }
 
     /**
@@ -50,7 +57,7 @@ public class PaymentServiceImpl implements PaymentService {
      * @return PaymentResponse avec le résultat
      */
     @Override
-    @Transactional("transactionManager")  // Transaction atomique DB + outbox
+    @Transactional("transactionManager") // Transaction atomique DB + outbox
     public PaymentResponse processPayment(PaymentRequest paymentRequest) {
         String orderId = paymentRequest.getOrderId();
 
@@ -122,6 +129,7 @@ public class PaymentServiceImpl implements PaymentService {
         // ÉTAPE 6: RETOUR DE LA RÉPONSE
         // ========================================
         LOGGER.info("🎉 Paiement traité avec succès - Exactly Once garanti!");
+        paymentsProcessedCounter.increment();
         return PaymentResponse.success(savedPayment);
     }
 

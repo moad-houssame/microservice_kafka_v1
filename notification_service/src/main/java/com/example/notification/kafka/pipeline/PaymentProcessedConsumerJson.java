@@ -3,6 +3,7 @@ package com.example.notification.kafka.pipeline;
 import com.example.notification.kafka.pipeline.dto.NotificationCreatedEvent;
 import com.example.notification.kafka.pipeline.dto.PaymentProcessedEvent;
 import com.example.notification.observability.KafkaTracePropagator;
+import io.micrometer.core.instrument.Counter;
 import io.micrometer.core.instrument.MeterRegistry;
 import io.micrometer.core.instrument.Timer;
 import io.opentelemetry.api.GlobalOpenTelemetry;
@@ -24,20 +25,19 @@ public class PaymentProcessedConsumerJson {
 
     private final NotificationEventPublisher notificationEventPublisher;
     private final MeterRegistry meterRegistry;
+    private final Counter notificationsSentCounter;
 
     public PaymentProcessedConsumerJson(
             NotificationEventPublisher notificationEventPublisher,
-            MeterRegistry meterRegistry
-    ) {
+            MeterRegistry meterRegistry) {
         this.notificationEventPublisher = notificationEventPublisher;
         this.meterRegistry = meterRegistry;
+        this.notificationsSentCounter = Counter.builder("notifications_sent_total")
+                .description("Total number of notifications successfully sent")
+                .register(meterRegistry);
     }
 
-    @KafkaListener(
-            topics = "${app.kafka.topics.payments}",
-            groupId = "notification-pipeline-group",
-            containerFactory = "pipelineJsonListenerContainerFactory"
-    )
+    @KafkaListener(topics = "${app.kafka.topics.payments}", groupId = "notification-pipeline-group", containerFactory = "pipelineJsonListenerContainerFactory")
     public void handle(ConsumerRecord<String, PaymentProcessedEvent> record) {
         PaymentProcessedEvent event = record.value();
         Timer.Sample sample = Timer.start(meterRegistry);
@@ -59,7 +59,7 @@ public class PaymentProcessedConsumerJson {
                     .message("Paiement " + event.getStatus() + " pour la commande " + event.getOrderId())
                     .build();
             notificationEventPublisher.publish(notification);
-            meterRegistry.counter("notifications.sent").increment();
+            notificationsSentCounter.increment();
         } finally {
             sample.stop(meterRegistry.timer("notifications.processing.duration"));
             consumeSpan.end();

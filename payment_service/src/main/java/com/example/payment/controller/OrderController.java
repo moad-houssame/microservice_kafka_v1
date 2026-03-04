@@ -10,6 +10,8 @@ import jakarta.validation.constraints.NotNull;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import io.micrometer.core.instrument.Counter;
+import io.micrometer.core.instrument.MeterRegistry;
 import java.math.BigDecimal;
 
 @RestController
@@ -17,9 +19,13 @@ import java.math.BigDecimal;
 public class OrderController {
 
     private final OrderEventPublisher orderEventPublisher;
+    private final Counter ordersProcessedCounter;
 
-    public OrderController(OrderEventPublisher orderEventPublisher) {
+    public OrderController(OrderEventPublisher orderEventPublisher, MeterRegistry meterRegistry) {
         this.orderEventPublisher = orderEventPublisher;
+        this.ordersProcessedCounter = Counter.builder("orders_processed_total")
+                .description("Total number of orders processed")
+                .register(meterRegistry);
     }
 
     @PostMapping
@@ -30,6 +36,7 @@ public class OrderController {
                 .amount(request.amount)
                 .build();
         orderEventPublisher.publish(event);
+        ordersProcessedCounter.increment();
         return ResponseEntity.accepted()
                 .header("X-Trace-Id", Span.current().getSpanContext().getTraceId())
                 .header("X-Span-Id", Span.current().getSpanContext().getSpanId())
